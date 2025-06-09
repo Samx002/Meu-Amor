@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(180deg, #ff4d6d, #f599aa);
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+.container {
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+.header {
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.header h1 {
+    font-family: 'Parisienne', cursive;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+}
+.header p {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.about-bianca {
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.about-bianca h2 {
+    font-family: 'Parisienne', cursive;
+    font-size: 2rem;
+    color: #ff4d6d;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.about-bianca p {
+    font-size: 1rem;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+.photo {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #fff;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+.photo:hover {
+    transform: scale(1.05);
+}
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+}
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    .header p {
+        font-size: 0.95rem;
+    }
+    .about-bianca h2 {
+        font-size: 1.8rem;
+    }
+    .about-bianca p {
+        font-size: 0.9rem;
+    }
+    .photo {
+        max-width: 70%;
+        height: 180px;
+    }
+}

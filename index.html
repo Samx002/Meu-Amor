@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Bianca - Dia dos Namorados</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Para o Amor da Minha Vida</h1>
+            <p>Quase 10 anos de amor, cumplicidade e felicidade. Feliz Dia dos Namorados, meu amor eterno!</p>
+        </div>
+        <div class="about-bianca">
+            <h2>Sobre Você, Minha Vida</h2>
+            <p>Meu Amor, você é a luz da minha vida. Sua alegria, sua força e seu carinho transformam cada dia em uma aventura inesquecível. Nesses quase 10 anos, cada momento ao seu lado foi um presente, desde os sorrisos compartilhados até os desafios que enfrentamos juntos. Você é minha melhor amiga, minha parceira e o amor da minha vida. Este Dia dos Namorados é só mais uma chance de dizer o quanto te amo e sou grato por você.❤️❤️❤️❤️</p>
+        </div>
+        <div class="gallery">
+            <!-- Substitua os URLs abaixo pelas suas fotos -->
+            <div class="photo" style="background-image: url('img/IMG_0480.JPG');"></div>
+            <div class="photo" style="background-image: url('img/IMG_0481.JPG');"></div>
+            <div class="photo" style="background-image: url('img/IMG_0482.JPG');"></div>
+            <div class="photo" style="background-image: url('img/IMG_0485.JPG');"></div>
+        </div>
+        <div class="footer">
+            <p>Te amo hoje, amanhã e para sempre, Meu Amor. ❤️</p>
+        </div>
+    </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(".header h1", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out"
+        });
+        gsap.to(".header p", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            delay: 0.5,
+            ease: "power2.out"
+        });
+        gsap.to(".about-bianca h2", {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".about-bianca",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+        gsap.to(".about-bianca p", {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: 0.3,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".about-bianca",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+        gsap.utils.toArray(".photo").forEach((photo, index) => {
+            gsap.to(photo, {
+                opacity: 1,
+                scale: 1,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: photo,
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                },
+                delay: index * 0.2
+            });
+        });
+        gsap.to(".footer", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: ".footer",
+                start: "top 90%",
+                toggleActions: "play none none none"
+            }
+        });
+    </script>
+</body>
+</html>
